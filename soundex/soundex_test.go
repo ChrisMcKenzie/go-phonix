@@ -60,6 +60,18 @@ func TestEncode(t *testing.T) {
 			"ashcraft",
 			"a261",
 		},
+		{
+			"kitt",
+			"k300",
+		},
+		{
+			"kris",
+			"k620",
+		},
+		{
+			"call",
+			"c400",
+		},
 	}
 
 	for _, test := range tests {
