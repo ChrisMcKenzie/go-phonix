@@ -1,0 +1,11 @@
+box: golang
+build:
+    # Steps make up the actions in your pipeline
+    # Read more about steps on our dev center:
+    # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    - wercker/golint
+    - script:
+        name: go test
+        code: |
+          go test ./...
