@@ -1,5 +1,9 @@
 package soundex
 
+// Package soundex defines a Match and Encode method that respectively match
+// and index string using the Soundex (https://en.wikipedia.org/wiki/Soundex)
+// algorithm
+
 import "strings"
 
 // Match checks whether two string match via their soundex values
@@ -16,7 +20,7 @@ func stripchars(str, chr string) string {
 	}, str)
 }
 
-// Encode encodes a string in to its [soundex](https://en.wikipedia.org/wiki/Soundex) 4 letter representation.
+// Encode encodes a string in to its soundex 4 letter representation.
 func Encode(val string) string {
 	dex := string(val[0])
 	letters := strings.ToLower(stripchars(val[1:], "aeiouyh"))
