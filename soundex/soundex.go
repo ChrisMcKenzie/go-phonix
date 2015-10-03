@@ -1,8 +1,8 @@
-package soundex
-
 // Package soundex defines a Match and Encode method that respectively match
 // and index string using the Soundex (https://en.wikipedia.org/wiki/Soundex)
 // algorithm
+
+package soundex
 
 import "strings"
 
