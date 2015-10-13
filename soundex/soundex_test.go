@@ -23,6 +23,20 @@ func TestMatch(t *testing.T) {
 		},
 		{
 			[2]string{
+				"CHRISTOPHER",
+				"chris",
+			},
+			false,
+		},
+		{
+			[2]string{
+				"MC KENZIE",
+				"mckenzie",
+			},
+			true,
+		},
+		{
+			[2]string{
 				"ashcraft",
 				"ashcroft",
 			},
@@ -71,6 +85,30 @@ func TestEncode(t *testing.T) {
 		{
 			"call",
 			"c400",
+		},
+		{
+			"CHRISTOPHER",
+			"c623",
+		},
+		{
+			"CHRIS",
+			"c620",
+		},
+		{
+			"MC KENZIE",
+			"m252",
+		},
+		{
+			"MCKENZIE",
+			"m252",
+		},
+		{
+			"Van Helsing",
+			"v542",
+		},
+		{
+			"Van tubular",
+			"v531",
 		},
 	}
 

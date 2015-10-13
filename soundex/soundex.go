@@ -21,8 +21,9 @@ func stripChars(str, chr string) string {
 
 // Encode encodes a string in to its soundex 4 letter representation.
 func Encode(val string) string {
+	val = strings.ToLower(val)
 	dex := string(val[0])
-	letters := strings.ToLower(stripChars(val[1:], "aeiouyh"))
+	letters := stripChars(val[1:], "aeiouyh ")
 	var previous string
 	for _, letter := range letters {
 		var current string
